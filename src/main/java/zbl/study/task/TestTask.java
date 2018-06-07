@@ -6,22 +6,12 @@ import zbl.study.model.TimedTask;
 import java.time.LocalDateTime;
 
 public class TestTask extends TimedTask {
-    private int port;
 
-    public TestTask(int port, LocalDateTime startTime) {
+    public TestTask(LocalDateTime startTime) {
         super(startTime);
-        this.port = port;
     }
 
     public TestTask() {
-    }
-
-    public int getPort() {
-        return port;
-    }
-
-    public void setPort(int port) {
-        this.port = port;
     }
 
     @Override
@@ -36,6 +26,6 @@ public class TestTask extends TimedTask {
 
     @Override
     public void executeTask(ApplicationContext context) {
-        logger.info("remotePort:{} ,test task is executed !!! test task successfully !!!", getPort());
+        logger.info("test task is executed !!! test task successfully !!!");
     }
 }

@@ -23,7 +23,7 @@ public class Application {
 
     @RequestMapping("/test.do")
     public String test() {
-        scheduleUtil.addTimeTaskSchedule(new TestTask(8080, LocalDateTime.now().plusSeconds(11)));
+        scheduleUtil.addTimeTaskSchedule(new TestTask(LocalDateTime.now().plusSeconds(11)));
         return "quartz success";
     }
 }
